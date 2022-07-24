@@ -1,0 +1,97 @@
+.footer {
+    background-color: $color-primary;
+    padding: 4.8rem 3.6rem 3.2rem 3.6rem;
+    color: $color-white;
+
+    @include respond($phone) {
+        padding: 2.4rem 1.4rem;
+    }
+
+    a:hover {
+        color: $color-grey-light;
+    }
+
+    &__content {
+        @include container;
+
+        @include respond($phone) {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: flex-end;
+            border-bottom: 1px solid $color-white;
+            padding-bottom: 2.8rem;
+            margin-bottom: 1.6rem;
+        }
+    }
+
+    &__copyright {
+        @include container;
+
+        @include font-size(1.6rem);
+        display: flex;
+        justify-content: space-between;
+
+        @include respond($phone) {
+            display: block;
+        }
+        
+        &-list {
+            display: flex;
+            @include font-size(1.4rem);
+
+            @include respond($phone) {
+                display: block;
+                padding-top: 0.8rem;
+            }
+        }
+
+        &-item:not(:last-child) {
+            margin-right: 4.8rem;
+
+            @include respond($phone) {
+                padding-bottom: .8rem;
+            }
+        }
+    }
+
+}
+
+.footer__contact {
+    padding-bottom: 3.2rem;
+    border-bottom: 1px solid $color-white;
+    margin-bottom: 3.2rem;
+
+    @include respond($phone) {
+        padding: 0;
+        margin: 0;
+        border-bottom: none;
+        margin-right: auto;
+    }
+    
+    &-item {
+        display: flex;
+        align-items: center;
+
+        .material-symbols-outlined {
+            margin-right: 2.2rem;
+            font-size: 4.8rem;
+
+            @include respond($phone) {
+                margin-right: 1.1rem;
+                font-size: 1.8rem;
+            }
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 0.8rem;
+        }
+    }
+    
+    &-link {
+        @include font-size(3.6rem);
+
+        @include respond($phone) {
+            @include font-size(1.6rem)
+        }
+    }
+}

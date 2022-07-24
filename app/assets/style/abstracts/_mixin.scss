@@ -1,0 +1,22 @@
+// font-size & line-height 1.5
+@mixin font-size($font-size) {
+    font-size: $font-size;
+    line-height: $font-size * 1.5;
+}
+
+// breakpoint
+@mixin respond($breakpoint) {
+    @media only screen and (max-width: $breakpoint) {
+        @content;
+    }
+}
+
+// container
+@mixin container {
+    max-width: 129.6rem;
+    margin: 0 auto;
+
+    @include respond($tablet) {
+        // max-width: 69.6rem
+    };
+}

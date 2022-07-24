@@ -1,0 +1,56 @@
+.card {
+    display: flex;
+    justify-content: center;
+    gap: 2.4rem;
+
+    @include respond($tablet) {
+        flex-wrap: wrap;
+    }
+
+    @include respond($phone) {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__item {
+        max-width: 30.6rem;
+        border: 1px solid $color-grey-light;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.16);
+
+        @include respond($tablet) {
+            width: 50%;
+        }
+
+        @include respond($phone) {
+            width: 100%;
+        }
+    }
+
+    &__detail {
+        @include font-size(1.6rem);
+        padding: 1.6rem;
+        height: 20.5rem;
+        // 日期置底
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__text{
+        // 超過5行隱藏
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+
+        & > * {
+            margin-bottom: 0.8rem;
+        }
+    }
+
+    &__time {
+        @include font-size(1.4rem);
+        color: $color-grey-dark;
+    }
+}
