@@ -22,7 +22,7 @@
       <nav class="navbar">
         <ul class="navbar__list">
           <li class="navbar__item"><a href="products.html">系列鏡框</a></li>
-          <li class="navbar__item"><a href="store.html">門市據點</a></li>
+          <li class="navbar__item"><a href="stores.html">門市據點</a></li>
           <li class="navbar__item"><a href="#">部落格</a></li>
           <li class="navbar__item"><a href="#">常見問題</a></li>
         </ul>
@@ -32,206 +32,58 @@
 
   
 <main>
-  <section class="store">
-    <div class="store__content container">
-      <h2 class="store__title heading-2">門市據點</h2>
-      <div class="store__filter">
-        <label for="city">選擇地區</label>
-        <select name="city" id="city">
-          <option value="">台北市</option>
-          <option value="">新北市</option>
-          <option value="">桃園市</option>
-          <option value="">台中市</option>
-          <option value="">高雄市</option>
-        </select>
-      </div>
+    <section class="store">
+        <div class="store__content container">
+            <h2 class="store__title heading-2">門市據點</h2>
+            <div class="filter">
+                <label for="city">選擇分店</label>
+                <select name="city" id="city">
+                    <option value="台北中山旗艦店">台北中山旗艦店</option>
+                    <option value="台北綠園店">台北綠園店</option>
+                    <option value="台中清水旗艦店">台中清水旗艦店</option>
+                    <option value="高雄中正形象店">高雄中正形象店</option>
+                    <option value="高雄夢時代店">高雄夢時代店</option>
+                </select>
+            </div>
 
-      <div class="store__card">
-        <ul class="store__card-list">
-          <li class="store__card-item">
-            <figure>
-              <img src="./assets/images/store-1.png" alt="Store 1" class="store__card-image">
-              <figcaption class="store__card-subTitle">台北中山旗艦店</figcaption>
-            </figure>
-
-            <ul class="store__card-detail">
-              <li class="store__card-detail-item">
-                <span class="material-symbols-outlined">call</span>
-                <p class="store__card-detail-text">
-                  電話：
-                  <a href="tel:+886-2-0001234">(02)000-1234</a>
-                </p>
-              </li>
-  
-              <li class="store__card-detail-item">
-                <span class="material-symbols-outlined">schedule</span>
-                <p class="store__card-detail-text">
-                  營業時間：10:00-21:00
-                </p>
-              </li>
-  
-              <li class="store__card-detail-item">
-                <span class="material-symbols-outlined">location_on</span>
-                <p class="store__card-detail-text">
-                  地址：
-                  <a href="https://goo.gl/maps/d524d8vuMpFu1dRR6" target="_blank">台北市中山區南京東路25巷2-1號</a>
-                </p>
+            <div class="store__describe">
+                <div class="store__card card--store">
+                    <img src="./assets/images/store-1.png" alt="Store 1" class="card--store-image">
+                    <div class="card--store-detail">
+                        <h3 class="card--store-subTitle">台北中山旗艦店</h3>
+                        <ul class="card--store-list">
+                            <li class="card--store-item">
+                                <span class="material-symbols-outlined">call</span>
+                                <p class="card--store-text">
+                                電話：
+                                <a href="tel:+886-2-0001234">(02)000-1234</a>
+                                </p>
+                            </li>
                 
-              </li>
-            </ul>
-            <a href="#" class="btn btn--lg btn--black store__card-button">詳細資料</a>
-          </li>
-        </ul>
+                            <li class="card--store-item">
+                                <span class="material-symbols-outlined">schedule</span>
+                                <p class="card--store-text">
+                                營業時間：10:00-21:00
+                                </p>
+                            </li>
+        
+                            <li class="card--store-item">
+                                <span class="material-symbols-outlined">location_on</span>
+                                <p class="card--store-text">
+                                地址：
+                                <a href="https://goo.gl/maps/qUcmQE5qneJ8QEEC6" target="_blank">台北市中山區南京東路25巷2-1號</a>
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
 
-        <ul class="store__card-list">
-          <li class="store__card-item">
-            <figure>
-              <img src="./assets/images/store-2.png" alt="Store 2" class="store__card-image">
-              <figcaption class="store__card-subTitle">台北綠園店</figcaption>
-            </figure>
-
-            <ul class="store__card-detail">
-              <li class="store__card-detail-item">
-                <span class="material-symbols-outlined">call</span>
-                <p class="store__card-detail-text">
-                  電話：
-                  <a href="tel:+886-2-0001234">(02)000-2345</a>
-                </p>
-              </li>
-  
-              <li class="store__card-detail-item">
-                <span class="material-symbols-outlined">schedule</span>
-                <p class="store__card-detail-text">
-                  營業時間：10:00-21:00
-                </p>
-              </li>
-  
-              <li class="store__card-detail-item">
-                <span class="material-symbols-outlined">location_on</span>
-                <p class="store__card-detail-text">
-                  地址：
-                  <a href="https://goo.gl/maps/jax5uEbsYKQtbP3j8" target="_blank">台北市中正區復興南路 132-1 號</a>
-                </p>
-                
-              </li>
-            </ul>
-            <a href="#" class="btn btn--lg btn--black store__card-button">詳細資料</a>
-          </li>
-        </ul>
-
-        <ul class="store__card-list">
-          <li class="store__card-item">
-            <figure>
-              <img src="./assets/images/store-3.png" alt="Store 3" class="store__card-image">
-              <figcaption class="store__card-subTitle">台中清水旗艦店</figcaption>
-            </figure>
-
-            <ul class="store__card-detail">
-              <li class="store__card-detail-item">
-                <span class="material-symbols-outlined">call</span>
-                <p class="store__card-detail-text">
-                  電話：
-                  <a href="tel:+886-2-0001234">(02)000-1234</a>
-                </p>
-              </li>
-  
-              <li class="store__card-detail-item">
-                <span class="material-symbols-outlined">schedule</span>
-                <p class="store__card-detail-text">
-                  營業時間：10:00-21:00
-                </p>
-              </li>
-  
-              <li class="store__card-detail-item">
-                <span class="material-symbols-outlined">location_on</span>
-                <p class="store__card-detail-text">
-                  地址：
-                  <a href="https://goo.gl/maps/VXCXqEyi57oBtjgt9" target="_blank">台中市清水區經南一路 23 號 8 樓</a>
-                </p>
-                
-              </li>
-            </ul>
-            <a href="#" class="btn btn--lg btn--black store__card-button">詳細資料</a>
-          </li>
-        </ul>
-
-        <ul class="store__card-list">
-          <li class="store__card-item">
-            <figure>
-              <img src="./assets/images/store-1.png" alt="Store 1" class="store__card-image">
-              <figcaption class="store__card-subTitle">高雄中正形象店</figcaption>
-            </figure>
-
-            <ul class="store__card-detail">
-              <li class="store__card-detail-item">
-                <span class="material-symbols-outlined">call</span>
-                <p class="store__card-detail-text">
-                  電話：
-                  <a href="tel:+886-2-0001234">(02)000-2345</a>
-                </p>
-              </li>
-  
-              <li class="store__card-detail-item">
-                <span class="material-symbols-outlined">schedule</span>
-                <p class="store__card-detail-text">
-                  營業時間：10:00-21:00
-                </p>
-              </li>
-  
-              <li class="store__card-detail-item">
-                <span class="material-symbols-outlined">location_on</span>
-                <p class="store__card-detail-text">
-                  地址：
-                  <a href="https://goo.gl/maps/4gjJCePvUyK8tb3n8" target="_blank">高雄市苓雅區中正路 38 號 12 樓</a>
-                </p>
-                
-              </li>
-            </ul>
-            <a href="#" class="btn btn--lg btn--black store__card-button">詳細資料</a>
-          </li>
-        </ul>
-
-        <ul class="store__card-list">
-          <li class="store__card-item">
-            <figure>
-              <img src="./assets/images/store-5.png" alt="Store 5" class="store__card-image">
-              <figcaption class="store__card-subTitle">高雄夢時代店</figcaption>
-            </figure>
-
-            <ul class="store__card-detail">
-              <li class="store__card-detail-item">
-                <span class="material-symbols-outlined">call</span>
-                <p class="store__card-detail-text">
-                  電話：
-                  <a href="tel:+886-2-0001234">(02)000-1234</a>
-                </p>
-              </li>
-  
-              <li class="store__card-detail-item">
-                <span class="material-symbols-outlined">schedule</span>
-                <p class="store__card-detail-text">
-                  營業時間：10:00-21:00
-                </p>
-              </li>
-  
-              <li class="store__card-detail-item">
-                <span class="material-symbols-outlined">location_on</span>
-                <p class="store__card-detail-text">
-                  地址：
-                  <a href="https://goo.gl/maps/a9AnP5PaEMdun5h3A" target="_blank">高雄市前鎮區中華一路 63 號 6 樓</a>
-                </p>
-                
-              </li>
-            </ul>
-            <a href="#" class="btn btn--lg btn--black store__card-button">詳細資料</a>
-          </li>
-        </ul>
-
-      </div>
-      
-
-    </div>
-  </section>
+                <div class="store__map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.462131746957!2d121.52590635064446!3d25.052321243631873!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a9665c221fab%3A0xe3c1d49711f01596!2zMTA0OTHlj7DljJfluILkuK3lsbHljYDljZfkuqzmnbHot6_kuozmrrUx6Jmf!5e0!3m2!1szh-TW!2stw!4v1658670897396!5m2!1szh-TW!2stw" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
 </main>
 
   <footer class="footer">
