@@ -1,0 +1,16 @@
+.stores {
+
+    &__content {
+        padding: 9.6rem 3.5rem 8rem 3.5rem;
+
+        @include respond($tablet) {
+            padding: 4rem 1.4rem 6.4rem 1.4rem;
+        }
+    }
+
+    &__title {
+        margin-bottom: 3.2rem;
+        padding-left: 1.6rem;
+        border-left: 8px solid $color-primary-dark2;
+    }
+}
