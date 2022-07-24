@@ -1,3 +1,4 @@
+// 首頁 顧客推薦 card
 .card {
     display: flex;
     justify-content: center;
@@ -6,7 +7,7 @@
     @include respond($tablet) {
         flex-wrap: wrap;
     }
-
+    
     @include respond($phone) {
         flex-direction: column;
         align-items: center;
@@ -52,5 +53,149 @@
     &__time {
         @include font-size(1.4rem);
         color: $color-grey-dark;
+    }
+}
+
+// 門市據點 card
+.card--stores {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2%;
+    margin: 0 auto;
+
+    @include respond($tablet) {
+        gap: 4%;
+    }
+
+    @include respond($phone) {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &-list {
+        max-width: 40rem;
+        width: 32%;
+
+        @include respond($tablet) {
+            width: 48%;
+        }
+
+        @include respond($phone) {
+            width: 100%;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 4.8rem;
+
+            @include respond($tablet) {
+                margin-bottom: 2.4rem;
+            }
+        }
+    }
+
+    &-item {
+        color: $color-black2;
+    }
+
+    &-subTitle {
+        padding: .8rem 2.4rem;
+        border: 1px solid rgba(0,0,0,.2);
+        @include font-size(2.4rem);
+    }
+
+    &-image {
+        height: 22.4rem;
+    }
+
+    &-detail {
+        padding: 1.6rem 2.4rem;
+        border: 1px solid rgba(0,0,0,.2);
+        @include font-size(2rem);
+
+        &-item {
+            display: flex;
+            align-items: center;
+            &:not(:last-child) {
+                margin-bottom: 0.8rem;
+            }
+        }
+
+        span {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-right: 0.8rem;
+        }
+    }
+
+    &-button {
+        @include font-size(1.9rem);
+    }
+}
+// 門市據點 - 選擇分店
+.card--store {
+    width: 40%;
+
+    @include respond($tablet) {
+        display: flex;
+        width: 100%;
+    }
+
+    @include respond($phone) {
+        display: block;
+    }
+
+    &-image {
+        width: 100%;
+
+        @include respond($tablet) {
+            width: 48%;
+            margin-right: 4%;
+        }
+
+        @include respond($phone) {
+            width: 100%;
+        }
+    }
+
+    &-detail {
+        @include respond($tablet) {
+            width: 48%;
+        }
+
+        @include respond($phone) {
+            width: 100%;
+        }
+    }
+
+    &-item {
+        color: $color-black2;
+    }
+
+    &-subTitle {
+        padding: .8rem 2.4rem;
+        border: 1px solid rgba(0,0,0,.2);
+        @include font-size(2.4rem);
+    }
+
+    &-list {
+        padding: 1.6rem 2.4rem;
+        border: 1px solid rgba(0,0,0,.2);
+        @include font-size(2rem);
+
+    }
+    
+    &-item {
+        display: flex;
+        align-items: center;
+
+        &:not(:last-child) {
+            margin-bottom: 0.8rem;
+        }
+
+        span {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-right: 0.8rem;
+        }
     }
 }
