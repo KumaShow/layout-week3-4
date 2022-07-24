@@ -1,0 +1,21 @@
+.filter {
+  margin-bottom: 4rem;
+  display: flex;
+  align-items: center;
+
+  @include respond($phone) {
+    margin-bottom: 2.4rem;
+  }
+  
+  label {
+      @include font-size(2.4rem);
+      margin-right: 1.6rem;
+  }
+
+  select {
+      @include font-size(1.8rem);
+      padding: 0.6rem 1.2rem;
+      width: 30.4rem;
+      height: 3.8rem;
+  }
+}
