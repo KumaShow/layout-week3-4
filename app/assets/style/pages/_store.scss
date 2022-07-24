@@ -1,109 +1,51 @@
 .store {
-
-    &__content {
-        padding: 9.6rem 3.5rem 8rem 3.5rem;
-
-        @include respond($tablet) {
-            padding: 4rem 1.4rem 6.4rem 1.4rem;
-        }
-    }
-
-    &__title {
-        margin-bottom: 3.2rem;
-        padding-left: 1.6rem;
-        border-left: 8px solid $color-primary-dark2;
-    }
-
-    &__filter {
-        margin-bottom: 4rem;
-        display: flex;
-        align-items: center;
-        
-        label {
-            @include font-size(2.4rem);
-            margin-right: 1.6rem;
-        }
-
-        select {
-            @include font-size(1.8rem);
-            width: 30.4rem;
-            height: 3.8rem;
-        }
-    }
-}
-
-.store__card {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2%;
-    margin: 0 auto;
+  
+  &__content {
+    padding: 9.6rem 3.5rem 8rem 3.5rem;
 
     @include respond($tablet) {
-        gap: 4%;
+      padding: 8rem 3.6rem;
     }
 
     @include respond($phone) {
-        flex-direction: column;
-        align-items: center;
+      padding: 4rem 1.4rem 6.4rem 1.4rem;
     }
+  }
 
-    &-list {
-        max-width: 40rem;
-        width: 32%;
+  &__title {
+    margin-bottom: 3.2rem;
+    padding-left: 1.6rem;
+    border-left: 8px solid $color-primary-dark2;
 
-        @include respond($tablet) {
-            // max-width: 33.7rem;
-            width: 48%;
-        }
-
-        @include respond($phone) {
-            width: 100%;
-        }
-
-        &:not(:last-child) {
-            margin-bottom: 4.8rem;
-
-            @include respond($tablet) {
-                margin-bottom: 2.4rem;
-            }
-        }
+    @include respond($phone) {
+      margin-bottom: 2.4rem;
     }
+  }
 
-    &-item {
-        color: $color-black2;
+  &__describe {
+    display: flex;
+    gap: 2%;
+
+    @include respond($tablet) {
+      gap: 0;
+      flex-direction: column;
+      width: 100%;
     }
+  }
 
-    &-subTitle {
-        padding: .8rem 2.4rem;
-        border: 1px solid rgba(0,0,0,.2);
-        @include font-size(2.4rem);
+  &__card {
+    @include respond($tablet) {
+      margin-bottom: 2.4rem;
+      width: 100%;
     }
+  }
 
-    &-image {
-        height: 22.4rem;
+  &__map {
+    width: 58%;
+
+    @include respond($tablet) {
+      width: 100%;
+      height: 41.4rem;
     }
-
-    &-detail {
-        padding: 1.6rem 2.4rem;
-        border: 1px solid rgba(0,0,0,.2);
-        @include font-size(2rem);
-
-        &-item {
-            display: flex;
-            align-items: center;
-            &:not(:last-child) {
-                margin-bottom: 0.8rem;
-            }
-        }
-
-        span {
-            font-size: 1.8rem;
-            font-weight: bold;
-            margin-right: 0.8rem;
-        }
-    }
-
-    &-button {
-        @include font-size(1.9rem);
-    }
+  }
 }
