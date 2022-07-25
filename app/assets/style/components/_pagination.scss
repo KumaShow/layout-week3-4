@@ -1,0 +1,56 @@
+.pagination {
+  text-align: center;
+  
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  &__item{
+    color: $color-grey-dark3;
+    border: 1px solid $color-grey-dark3;
+
+    a {
+      display: block;
+      @include roboto(1.8rem, 400);
+      padding: 1.2rem 1.6rem;
+      height: 4.8rem;
+
+      @include respond($phone) {
+        @include font-size(1.6rem);
+        height: 4.5rem;
+        width: 3.9rem;
+      }
+    }
+    // 頭尾上下頁 link
+    &:first-of-type a,
+    &:last-of-type a{
+      @include roboto(1.9rem, 400);
+      padding: 1.1rem 1.2rem;
+
+      @include respond($phone) {
+        padding: 1rem .5rem;
+        width: 100%;
+      }
+    }
+
+    &:not(:last-child) {
+      border-right: none;
+    }
+
+    &:last-child {
+      background-color: $color-grey-light3;
+    }
+
+    &:hover {
+      background-color: $color-black;
+      color: $color-white;
+    }
+
+    &--active {
+      background-color: $color-black;
+      color: $color-white;
+    }
+  }
+}
