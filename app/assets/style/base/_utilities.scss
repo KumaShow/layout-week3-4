@@ -1,3 +1,12 @@
 .container {
     @include container;
 }
+
+// 背景顏色
+.bg-color-brown {
+    background-color: $color-brown;
+}
+
+.bg-color-brown-dark {
+    background-color: $color-brown-dark;
+}
