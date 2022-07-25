@@ -1,0 +1,161 @@
+// blog navbar
+.blog__nav {
+  background-color: $color-primary-dark;
+  color: $color-white;
+  @include font-size(2rem);
+  padding: 0 3.6rem;
+
+  @include respond($phone) {
+    display: none;
+  }
+  
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+  &__list {
+    display: flex;
+
+    a {
+      display: block;
+      padding: 1.3rem 0;
+
+      &:hover {
+        color: $color-grey-light;
+        padding-bottom: 1px;
+        border-bottom: 1px solid $color-white;
+      }
+    }
+  }
+
+  &__item {
+
+    &:not(:last-child) {
+      margin-right: 4.8rem;
+    }
+  }
+
+  &__search {
+    font-size: 2.9rem;
+
+    & span:hover {
+      color: $color-grey-light;
+      transform: scale(1.2);
+    }
+  }
+}
+
+// blog content
+.blog {
+  padding: 9.6rem 3.6rem 8rem 3.6rem;
+
+  @include respond($phone) {
+    padding: 4rem 1.4rem 6.4rem 1.4rem;
+  }
+
+  &__content {
+
+  }
+
+  &__title {
+    margin-bottom: 3.2rem;
+    padding-left: 1.6rem;
+    border-left: 8px solid $color-primary-dark2;
+  }
+
+  &__list {
+    margin-bottom: 12.4rem;
+
+    @include respond($tablet) {
+      margin-bottom: 8rem;
+    }
+
+    @include respond($phone) {
+      margin-bottom: 6.4rem;
+    }
+  }
+
+  &__item {
+    display: flex;
+    gap: 2%;
+
+    @include respond($phone) {
+      display: block;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 6rem;
+
+      @include respond($phone) {
+        margin-bottom: 2.4rem;
+      }
+    }
+
+    &__image {
+      width: 49%;
+
+      @include respond($phone) {
+        width: 100%;
+        margin-bottom: 0.8rem;
+      }
+    }
+
+    &__detail {
+      width: 49%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-end;
+
+      @include respond($phone) {
+        display: block;
+        width: 100%;
+      }
+    }
+
+    &__title {
+      @include font-size(3.2rem);
+      color: $color-primary-dark;
+    }
+
+    &__subTitle {
+      @include roboto(2rem, 500);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.6rem;
+
+      @include respond($phone) {
+        // display: block;
+      }
+    }
+
+    &__date {
+      @include font-size(1.6rem);
+
+      @include respond($phone) {
+        display: block;
+      }
+    }
+
+    &__text {
+      @include font-size(2rem);
+      color: $color-grey-dark3;
+
+      @include respond($phone) {
+        display: none;
+      }
+    }
+
+    &__more {
+      @include roboto(3.6rem, 900);
+      color: $color-primary-dark;
+
+      @include respond($phone) {
+        display: none;
+      }
+    }
+  }
+}
