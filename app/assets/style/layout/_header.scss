@@ -2,6 +2,18 @@
     background-color: $color-primary;
     padding: 0 3.6rem;
 
+    &__logo {
+        background: url(../images/logo-white.png) no-repeat center center;
+        background-size: cover;
+        width: 8rem;
+        height: 4.9rem;
+        padding: 4px 0;
+        display: block;
+        text-indent: 101%;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
     @include respond($phone) {
         padding: 1.2rem 1.5rem;
     }
@@ -11,11 +23,5 @@
         justify-content: space-between;
         align-items: center;
         @include container;
-    }
-
-    &__logo {
-        max-width: 8rem;
-        max-height: 4.9rem;
-        padding: 4px 0;
     }
 } 
