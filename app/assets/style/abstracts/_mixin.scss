@@ -20,3 +20,16 @@
         // max-width: 69.6rem
     };
 }
+
+// content padding
+@mixin content{
+    padding: 9.6rem 3.6rem 8rem 3.6rem;
+
+    @include respond($tablet) {
+        padding: 8rem 3.6rem;
+    }
+
+    @include respond($phone) {
+        padding: 4rem 1.4rem 6.4rem 1.4rem;
+    }
+}
