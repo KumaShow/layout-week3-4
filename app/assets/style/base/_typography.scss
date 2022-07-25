@@ -21,6 +21,11 @@
     font-weight: bold;
 }
 
+.heading-4 {
+    @include font-size(2rem);
+    font-weight: bold;
+}
+
 .heading-roboto {
     @include font-size(4.8rem);
     font-weight: bold;
