@@ -1,0 +1,138 @@
+.products__header {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+
+  &__item {
+    @include roboto(3.2rem, 400);
+    width: 33.333%;
+    border: 1px solid $color-grey-light4;
+
+    &:not(:last-child) {
+      border-right: none;
+    }
+
+    @include respond($phone) {
+      @include font-size(1.6rem);
+    }
+
+    a {
+      width: 100%;
+      padding: 2.4rem 0;
+      display: inline-block;
+
+      @include respond($phone) {
+        padding: 1.6rem 1.3rem;
+      }
+    }
+
+    &--active,
+    &:hover  {
+      border-bottom: 8px solid $color-primary;
+    }
+
+  }
+
+  &__image {
+    display: flex;
+  }
+}
+// 下方產品列表
+.products {
+  &__content {
+    padding: 8rem 3.6rem;
+
+    @include respond($phone) {
+      padding: 6.4rem 1.4rem;
+    }
+  }
+
+  &__text {
+    text-align: center;
+    margin-bottom: 3.2rem;
+
+    @include respond($phone) {
+      margin-bottom: 2.4rem;
+    }
+  }
+
+  &__title {
+    @include roboto(4.2rem, 500);
+
+    @include respond($phone) {
+      @include font-size(2.4rem);
+    }
+  }
+
+  &__caption {
+    @include font-size(3.2rem);
+
+    @include respond($phone) {
+      @include font-size(2.4rem);
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2%;
+  }
+
+  &__item {
+    width: 23.5%;
+    margin-bottom: 8rem;
+
+    @include respond($tablet) {
+      width: 48%;
+
+      &:not(:last-child) {
+        margin-bottom: 4rem;
+      }
+    }
+
+    @include respond($phone) {
+      width: 100%;
+      margin-bottom: 6.4rem;
+    }
+
+    &--sunglass {
+      width: 32%;
+
+      @include respond($tablet) {
+        width: 48%;
+      }
+      @include respond($phone) {
+        width: 100%;
+      }
+    }
+  }
+  &__image {
+    width: 100%;
+  }
+
+  &__detail {
+    display: flex;
+    justify-content: space-between;
+    // width: 100%;
+  }
+
+  &__name {
+    @include roboto(2.4rem, 400);
+  }
+
+  &__price {
+    @include roboto(2.4rem, 500);
+    color: $color-primary;
+  }
+}
+
+.products__color {
+  &__item {
+    display: inline-block;
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 4px;
+    margin-right: 0.8rem;
+  }
+}
+
