@@ -6,21 +6,35 @@
   padding: 0 3.6rem;
 
   @include respond($phone) {
-    display: none;
+    // display: none;
+    @include font-size(1.6rem);
+    padding: 0;
   }
   
   &__content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    @include respond($phone) {
+      justify-content: center;
+    }
   }
   &__list {
     display: flex;
 
+    @include respond($phone) {
+      // 手機自適應滿版
+      width: 100%;
+      justify-content: space-around;
+    }
+
     a {
       display: block;
       padding: 1.3rem 0;
+
+      @include respond($phone) {
+        padding: 1.2rem 1rem;
+      }
 
       &:hover {
         color: $color-grey-light;
@@ -31,9 +45,12 @@
   }
 
   &__item {
-
     &:not(:last-child) {
       margin-right: 4.8rem;
+
+      @include respond($phone) {
+        margin-right: 0;
+      }
     }
   }
 
@@ -43,6 +60,10 @@
     & span:hover {
       color: $color-grey-light;
       transform: scale(1.2);
+    }
+
+    @include respond($phone) {
+      display: none;
     }
   }
 }
@@ -54,11 +75,7 @@
   @include respond($phone) {
     padding: 4rem 1.4rem 6.4rem 1.4rem;
   }
-
-  &__content {
-
-  }
-
+  
   &__title {
     margin-bottom: 3.2rem;
     padding-left: 1.6rem;
@@ -88,16 +105,16 @@
     &:not(:last-child) {
       margin-bottom: 6rem;
 
-      @include respond($phone) {
+      @include respond($tablet) {
         margin-bottom: 2.4rem;
       }
     }
 
     &__image {
-      width: 49%;
+      max-width: 49%;
 
       @include respond($phone) {
-        width: 100%;
+        max-width: 100%;
         margin-bottom: 0.8rem;
       }
     }
@@ -118,6 +135,10 @@
     &__title {
       @include font-size(3.2rem);
       color: $color-primary-dark;
+
+      @include respond($tablet) {
+        @include font-size(2.4rem);
+      }
     }
 
     &__subTitle {
@@ -127,8 +148,9 @@
       align-items: center;
       margin-bottom: 1.6rem;
 
-      @include respond($phone) {
-        // display: block;
+      @include respond($tablet) {
+        @include font-size(1.6rem);
+        margin-bottom: 4px;
       }
     }
 
@@ -143,6 +165,15 @@
     &__text {
       @include font-size(2rem);
       color: $color-grey-dark3;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 5;
+      -webkit-box-orient: vertical;
+
+      @include respond($tablet) {
+        -webkit-line-clamp: 3;
+      }
 
       @include respond($phone) {
         display: none;
@@ -155,6 +186,10 @@
 
       @include respond($phone) {
         display: none;
+      }
+
+      &:hover {
+        transform: scale(1.1);
       }
     }
   }
