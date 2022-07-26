@@ -1,0 +1,173 @@
+.article__nav {
+  @include font-size(1.6rem);
+  margin-bottom: 0.8rem;
+
+  &__list {
+    display: flex;
+    margin-bottom: 0.8rem;
+  }
+
+  &__link {
+    &:hover,
+    &--active{
+      color: $color-primary;
+    }
+  }
+}
+
+.article {
+  padding: 2.4rem 3.6rem;
+  @include respond($tablet) {
+    padding: 2.4rem 3.6rem 0rem 3.6rem;
+
+    @include respond($phone) {
+      padding: 1.6rem 1.4rem 6.4rem 1.4rem;
+    }
+  }
+
+  &__content {
+    display: flex;
+    gap: 2%;
+
+    &__main {
+      width: 66%;
+      margin-bottom: 4rem;
+
+      @include respond($phone) {
+        width: 100%;
+        margin-bottom: 0;
+      }
+    }
+
+    &__aside {
+      max-width: 25.6rem;
+
+      @include respond($tablet) {
+        max-width: 15rem;
+      }
+
+      @include respond($phone) {
+        display: none;
+      }
+    }
+  }
+
+  &__title {
+    font-weight: 400;
+  }
+
+  &__subTitle {
+    @include roboto(2.4rem, 400);
+    margin-bottom: 1.6rem;
+
+    @include respond($tablet) {
+      margin-bottom: 2.4rem;
+    }
+
+    @include respond($phone) {
+      @include font-size(1.6rem);
+      margin-bottom: 1.6rem;
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 4rem;
+    }
+
+    @include respond($tablet) {
+      &:not(:last-child) {
+        margin-bottom: 2.4rem;
+      }
+    }
+
+    @include respond($phone) {
+      &:not(:last-child) {
+        margin-bottom: 1.6rem;
+      }
+    }
+  }
+
+  &__image {
+    margin-bottom: 0.8rem;
+
+    @include respond($tablet) {
+      margin-bottom: 1.6rem;
+    }
+
+    @include respond($phone) {
+      margin-bottom: 0.8rem;
+    }
+  }
+
+  &__text {
+    color: $color-grey-dark3;
+    @include font-size(1.6rem);
+  }
+}
+
+// 底部連結
+.article__footer {
+  width: 66%;
+  margin-bottom: 8rem;
+
+  @include respond($tablet) {
+    width: 100%;
+  }
+
+  @include respond($phone) {
+    display: none;
+  }
+  
+  &__list {
+    display: flex;
+    align-items: center;
+    padding-bottom: 1.6rem;
+    margin-bottom: 2.4rem;
+    border-bottom: 1px solid $color-grey-dark;
+  }
+
+  &__item {
+    @include roboto(1.6rem, 700);
+    margin-right: 1.6rem;
+
+    img {
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  &__link {
+    display: flex;
+    justify-content: space-between;
+    @include font-size(1.6rem);
+
+    a{
+      display: flex;
+      align-items: center;
+    }
+
+    & a:hover {
+      color: $color-primary;
+      .left-arrow {
+        transform: translateX(-4px);
+      }
+
+      .right-arrow {
+        transform: translateX(4px);
+      }
+    }
+  }
+}
+
+.left-arrow {
+  margin-right: 1.2rem;
+}
+
+.right-arrow {
+  margin-left: 1.2rem;
+}
