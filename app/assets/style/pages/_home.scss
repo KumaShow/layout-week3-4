@@ -108,7 +108,6 @@
 
     &__item {
         width: 32%;
-        // max-width: 41.6rem;
 
         @include respond($tablet) {
             width: 50%;
@@ -123,7 +122,6 @@
         margin-bottom: 0.8rem;
 
         @include respond($tablet) {
-            // max-width: 33.6rem;
             width: 100%;
         }
 

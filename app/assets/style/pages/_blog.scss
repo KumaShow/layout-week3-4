@@ -6,7 +6,6 @@
   padding: 0 3.6rem;
 
   @include respond($phone) {
-    // display: none;
     @include font-size(1.6rem);
     padding: 0;
   }
