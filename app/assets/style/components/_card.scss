@@ -1,201 +1,63 @@
-// 首頁 顧客推薦 card
 .card {
-    display: flex;
-    justify-content: center;
-    gap: 2.4rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 -1.2rem;
+  gap: 1%;
 
-    @include respond($tablet) {
-        flex-wrap: wrap;
-    }
+  &__item {
+    padding: 0 1.2rem;
+    width: 23%;
     
-    @include respond($phone) {
-        flex-direction: column;
-        align-items: center;
+    @include respond($lg) {
+      width: 45%;
+      
+      &:not(:last-child) {
+        margin-bottom: 2.4rem;
+      }
     }
 
-    &__item {
-        max-width: 30.6rem;
-        border: 1px solid $color-grey-light;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.16);
+    @include respond($md) {
+      width: 100%;
+      max-width: 34.8rem;
 
-        @include respond($tablet) {
-            width: 50%;
-        }
-
-        @include respond($phone) {
-            width: 100%;
-        }
+      &:not(:last-child) {
+        margin-bottom: 1.6rem;
+      }
     }
 
-    &__detail {
-        @include font-size(1.6rem);
-        padding: 1.6rem;
-        height: 20.5rem;
-        // 日期置底
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+    @include respond($xs) {
+      width: 90%;
     }
-
-    &__text{
-        // 超過5行隱藏
-        overflow: hidden;
-        text-overflow: ellipsis;
-        display: -webkit-box;
-        -webkit-line-clamp: 5;
-        -webkit-box-orient: vertical;
-
-        & > * {
-            margin-bottom: 0.8rem;
-        }
-    }
-
-    &__time {
-        @include font-size(1.4rem);
-        color: $color-grey-dark;
-    }
-}
-
-// 門市據點 card
-.card--stores {
+  }
+  
+  &__detail {
+    padding: 1.6rem;
+    height: 20.5rem;
+    // 日期置底
     display: flex;
-    flex-wrap: wrap;
-    gap: 2%;
-    margin: 0 auto;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid $color-grey-light;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.16);
+  }
 
-    @include respond($tablet) {
-        gap: 4%;
-    }
+  &__text {
+    @include font-size(1.6rem);
+    // 超過4行隱藏
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
 
-    @include respond($phone) {
-        flex-direction: column;
-        align-items: center;
-    }
+    & > * {
+      margin-bottom: 0.8rem;
+  }
+  }
 
-    &-list {
-        max-width: 40rem;
-        width: 32%;
-
-        @include respond($tablet) {
-            width: 48%;
-        }
-
-        @include respond($phone) {
-            width: 100%;
-        }
-
-        &:not(:last-child) {
-            margin-bottom: 4.8rem;
-
-            @include respond($tablet) {
-                margin-bottom: 2.4rem;
-            }
-        }
-    }
-
-    &-item {
-        color: $color-black2;
-    }
-
-    &-subTitle {
-        padding: .8rem 2.4rem;
-        border: 1px solid rgba(0,0,0,.2);
-        @include font-size(2.4rem);
-    }
-
-    &-image {
-        height: 22.4rem;
-    }
-
-    &-detail {
-        padding: 1.6rem 2.4rem;
-        border: 1px solid rgba(0,0,0,.2);
-        @include font-size(2rem);
-
-        &-item {
-            display: flex;
-            align-items: center;
-            &:not(:last-child) {
-                margin-bottom: 0.8rem;
-            }
-        }
-
-        span {
-            font-size: 1.8rem;
-            font-weight: bold;
-            margin-right: 0.8rem;
-        }
-    }
-
-    &-button {
-        @include font-size(1.9rem);
-    }
-}
-// 門市據點 - 選擇分店
-.card--store {
-    width: 40%;
-
-    @include respond($tablet) {
-        display: flex;
-        width: 100%;
-    }
-
-    @include respond($phone) {
-        display: block;
-    }
-
-    &-image {
-        width: 100%;
-
-        @include respond($tablet) {
-            width: 48%;
-            margin-right: 4%;
-        }
-
-        @include respond($phone) {
-            width: 100%;
-        }
-    }
-
-    &-detail {
-        @include respond($tablet) {
-            width: 48%;
-        }
-
-        @include respond($phone) {
-            width: 100%;
-        }
-    }
-
-    &-item {
-        color: $color-black2;
-    }
-
-    &-subTitle {
-        padding: .8rem 2.4rem;
-        border: 1px solid rgba(0,0,0,.2);
-        @include font-size(2.4rem);
-    }
-
-    &-list {
-        padding: 1.6rem 2.4rem;
-        border: 1px solid rgba(0,0,0,.2);
-        @include font-size(2rem);
-
-    }
-    
-    &-item {
-        display: flex;
-        align-items: center;
-
-        &:not(:last-child) {
-            margin-bottom: 0.8rem;
-        }
-
-        span {
-            font-size: 1.8rem;
-            font-weight: bold;
-            margin-right: 0.8rem;
-        }
-    }
+  &__time {
+    @include font-size(1.4rem);
+    color: $color-grey-dark;
+  }
 }

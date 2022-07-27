@@ -17,10 +17,14 @@
       padding: 1.2rem 1.6rem;
       height: 4.8rem;
 
-      @include respond($phone) {
+      @include respond($md) {
         @include font-size(1.6rem);
         height: 4.5rem;
         width: 3.9rem;
+      }
+
+      @include respond($xs) {
+        padding: 1rem;
       }
     }
     // 頭尾上下頁 link
@@ -29,9 +33,13 @@
       @include roboto(1.9rem, 400);
       padding: 1.1rem 1.2rem;
 
-      @include respond($phone) {
+      @include respond($md) {
         padding: 1rem .5rem;
         width: 100%;
+      }
+      
+      @include respond($xs) {
+        @include font-size(1.6rem);
       }
     }
 

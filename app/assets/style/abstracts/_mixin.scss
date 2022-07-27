@@ -13,19 +13,32 @@
 
 // container
 @mixin container {
-    max-width: 129.6rem;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+    max-width: 132rem; // 1296 + 12 + 12
     margin: 0 auto;
+
+    @include respond($lg) {// 1024px
+        max-width: 992px; //
+    }
+    @include respond($md) {// 743px
+        max-width: 720px; // 696 + 12 + 12
+    }
+    @include respond($xs) {//375px
+        max-width: 372px; // 348 + 12 +12
+    }
 }
 
 // 重複的 content padding
 @mixin content{
-    padding: 9.6rem 3.6rem 8rem 3.6rem;
+    padding-top: 9.6rem;
+    padding-bottom: 8rem;
 
-    @include respond($tablet) {
+    @include respond($lg) {
         padding: 8rem 3.6rem;
     }
 
-    @include respond($phone) {
+    @include respond($md) {
         padding: 4rem 1.4rem 6.4rem 1.4rem;
     }
 }

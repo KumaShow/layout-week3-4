@@ -40,7 +40,7 @@
         width: 70%;
         margin: 0 auto;
         
-        @include respond($phone) {
+        @include respond($md) {
             width: 100%;
         }
     }

@@ -12,7 +12,7 @@
       border-right: none;
     }
 
-    @include respond($phone) {
+    @include respond($md) {
       @include font-size(1.6rem);
     }
 
@@ -21,7 +21,7 @@
       padding: 2.4rem 0;
       display: inline-block;
 
-      @include respond($phone) {
+      @include respond($md) {
         padding: 1.6rem 1.3rem;
       }
     }
@@ -40,9 +40,10 @@
 // 下方產品列表
 .products {
   &__content {
-    padding: 8rem 3.6rem;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
 
-    @include respond($phone) {
+    @include respond($md) {
       padding: 6.4rem 1.4rem;
     }
   }
@@ -51,7 +52,7 @@
     text-align: center;
     margin-bottom: 3.2rem;
 
-    @include respond($phone) {
+    @include respond($md) {
       margin-bottom: 2.4rem;
     }
   }
@@ -59,7 +60,7 @@
   &__title {
     @include roboto(4.2rem, 500);
 
-    @include respond($phone) {
+    @include respond($md) {
       @include font-size(2.4rem);
     }
   }
@@ -67,22 +68,32 @@
   &__caption {
     @include font-size(3.2rem);
 
-    @include respond($phone) {
+    @include respond($md) {
       @include font-size(2.4rem);
     }
   }
 
   &__list {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
-    gap: 2%;
+    margin: 0 -1.2rem;
+
+    @include respond($lg) {
+      padding: 0 3.6rem;
+    }
+    
+    @include respond($md) {
+      padding: 0;
+    }
   }
 
   &__item {
+    padding: 0 1.2rem;
     width: 23.5%;
     margin-bottom: 8rem;
 
-    @include respond($tablet) {
+    @include respond($lg) {
       width: 48%;
 
       &:not(:last-child) {
@@ -90,7 +101,7 @@
       }
     }
 
-    @include respond($phone) {
+    @include respond($md) {
       width: 100%;
       margin-bottom: 6.4rem;
     }
@@ -98,10 +109,10 @@
     &--sunglass {
       width: 32%;
 
-      @include respond($tablet) {
+      @include respond($lg) {
         width: 48%;
       }
-      @include respond($phone) {
+      @include respond($md) {
         width: 100%;
       }
     }

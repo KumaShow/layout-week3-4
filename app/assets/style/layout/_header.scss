@@ -14,7 +14,7 @@
         white-space: nowrap;
     }
 
-    @include respond($phone) {
+    @include respond($md) {
         padding: 1.2rem 1.5rem;
     }
     

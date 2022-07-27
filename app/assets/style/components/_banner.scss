@@ -4,10 +4,11 @@
     height: 80vh;
     padding: 3.6rem;
 
-    @include respond($phone) {
+    @include respond($md) {
         height: 60vh;
         background: url(../images/home-header-sm.png) no-repeat center center;
         background-size: cover;
+        padding: 1.4rem;
     }
     
     &__content {
@@ -24,7 +25,7 @@
         font-family: $font-notoSans;
         font-size: 3.6rem;
 
-        @include respond($phone) {
+        @include respond($md) {
             @include font-size(1.6rem);
         }
     }
@@ -32,7 +33,7 @@
     &__title {
         padding-bottom: 4px;
 
-        @include respond($phone) {
+        @include respond($md) {
             padding-bottom: 1.4rem;
         }
     }

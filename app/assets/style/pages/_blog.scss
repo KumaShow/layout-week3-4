@@ -1,79 +1,6 @@
-// blog navbar
-.blog__nav {
-  background-color: $color-primary-dark;
-  color: $color-white;
-  @include font-size(2rem);
-  padding: 0 3.6rem;
-
-  @include respond($phone) {
-    @include font-size(1.6rem);
-    padding: 0;
-  }
-  
-  &__content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    @include respond($phone) {
-      justify-content: center;
-    }
-  }
-  &__list {
-    display: flex;
-
-    @include respond($phone) {
-      // 手機自適應滿版
-      width: 100%;
-      justify-content: space-around;
-    }
-
-    a {
-      display: block;
-      padding: 1.3rem 0;
-
-      @include respond($phone) {
-        padding: 1.2rem 1rem;
-      }
-
-      &:hover {
-        color: $color-grey-light;
-        padding-bottom: 1px;
-        border-bottom: 1px solid $color-white;
-      }
-    }
-  }
-
-  &__item {
-    &:not(:last-child) {
-      margin-right: 4.8rem;
-
-      @include respond($phone) {
-        margin-right: 0;
-      }
-    }
-  }
-
-  &__search {
-    font-size: 2.9rem;
-
-    & span:hover {
-      color: $color-grey-light;
-      transform: scale(1.2);
-    }
-
-    @include respond($phone) {
-      display: none;
-    }
-  }
-}
-
 // blog content
 .blog {
-  padding: 9.6rem 3.6rem 8rem 3.6rem;
-
-  @include respond($phone) {
-    padding: 4rem 1.4rem 6.4rem 1.4rem;
-  }
+  @include content;
   
   &__title {
     margin-bottom: 3.2rem;
@@ -83,112 +10,140 @@
 
   &__list {
     margin-bottom: 12.4rem;
-
-    @include respond($tablet) {
+    margin-left: -1.2rem;
+    margin-right: -1.2rem;
+    @include respond($lg) {
       margin-bottom: 8rem;
     }
 
-    @include respond($phone) {
+    @include respond($md) {
       margin-bottom: 6.4rem;
     }
   }
+}
 
-  &__item {
+.blog__item {
+  display: flex;
+  padding: 0 1.2rem;
+
+  @include respond($md) {
+    display: block;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 6rem;
+
+    @include respond($lg) {
+      margin-bottom: 2.4rem;
+    }
+  }
+
+  &__image {
+    margin-right: 1.2rem;
+    width: 50%;
+
+    @include respond($md) {
+      width: 100%;
+      margin-bottom: 0.8rem;
+    }
+  }
+
+  &__detail {
+    margin-left: 1.2rem;
+    width: 50%;
     display: flex;
-    gap: 2%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
 
-    @include respond($phone) {
+    @include respond($md) {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  &__title {
+    @include font-size(3.2rem);
+    color: $color-primary-dark;
+
+    @include respond($lg) {
+      @include font-size(2.4rem);
+    }
+  }
+
+  &__subTitle {
+    @include roboto(2rem, 500);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.6rem;
+
+    @include respond($lg) {
+      @include font-size(1.6rem);
+      margin-bottom: 4px;
+    }
+
+    @include respond($md) {
+      // width: 100%;
+    }
+  }
+
+  &__date {
+    @include font-size(1.6rem);
+
+    @include respond($md) {
       display: block;
     }
+  }
 
-    &:not(:last-child) {
-      margin-bottom: 6rem;
+  &__text {
+    @include font-size(2rem);
+    color: $color-grey-dark3;
+    overflow: hidden;
+    text-overflow: clip;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    position: relative;
 
-      @include respond($tablet) {
-        margin-bottom: 2.4rem;
+    @include respond($lg) {
+      -webkit-line-clamp: 4;
+
+      &::after {
+        font-size: 1.6rem;
+        content: "...more";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: 100;
+        background-color: rgba(white, $alpha: 1);
+        padding: 1px;
+        cursor: pointer;
       }
     }
 
-    &__image {
-      max-width: 49%;
+    @include respond($md) {
+      display: none;
+    }
+  }
 
-      @include respond($phone) {
-        max-width: 100%;
-        margin-bottom: 0.8rem;
-      }
+  &__more {
+    @include roboto(3.6rem, 900);
+    color: $color-primary-dark;
+
+    @include respond($lg) {
+      display: none;
     }
 
-    &__detail {
-      width: 49%;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: flex-end;
-
-      @include respond($phone) {
-        display: block;
-        width: 100%;
-      }
+    @include respond($md) {
+      display: none;
     }
 
-    &__title {
-      @include font-size(3.2rem);
-      color: $color-primary-dark;
+    &:hover {
+      transform: scale(1.1);
 
-      @include respond($tablet) {
-        @include font-size(2.4rem);
-      }
-    }
-
-    &__subTitle {
-      @include roboto(2rem, 500);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 1.6rem;
-
-      @include respond($tablet) {
-        @include font-size(1.6rem);
-        margin-bottom: 4px;
-      }
-    }
-
-    &__date {
-      @include font-size(1.6rem);
-
-      @include respond($phone) {
-        display: block;
-      }
-    }
-
-    &__text {
-      @include font-size(2rem);
-      color: $color-grey-dark3;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      display: -webkit-box;
-      -webkit-line-clamp: 5;
-      -webkit-box-orient: vertical;
-
-      @include respond($tablet) {
-        -webkit-line-clamp: 3;
-      }
-
-      @include respond($phone) {
-        display: none;
-      }
-    }
-
-    &__more {
-      @include roboto(3.6rem, 900);
-      color: $color-primary-dark;
-
-      @include respond($phone) {
-        display: none;
-      }
-
-      &:hover {
-        transform: scale(1.1);
+      @include respond($lg) {
+        transform: scale(1.2);
       }
     }
   }

@@ -8,3 +8,73 @@
         border-left: 8px solid $color-primary-dark2;
     }
 }
+
+// 門市據點 card
+.stores__card {
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -1.2rem;
+        // 卡片底部推擠消除
+        margin-bottom: -4.8rem;
+        @include respond($lg) {
+            margin-bottom: 0;
+        }
+    }
+
+    &__item {
+        color: $color-black2;
+        width: 33%;
+        padding: 0 1.2rem;
+        
+        @include respond($lg) {
+            width: 48%;
+        }
+
+        @include respond($md) {
+            width: 100%;
+        }
+
+    }
+    &__item:not(:last-child) {
+        margin-bottom: 4.8rem;
+
+        @include respond($lg) {
+            margin-bottom: 2.4rem;
+        }
+    }
+
+    &__title {
+        padding: .8rem 2.4rem;
+        border: 1px solid rgba(0,0,0,.2);
+        @include font-size(2.4rem);
+    }
+    // 卡片下方聯絡資訊
+    &__detail {
+        display: flex;
+        padding: 1.6rem 2.4rem;
+        border: 1px solid rgba(0,0,0,.2);
+        @include font-size(2rem);
+
+        &__item {
+            display: flex;
+            align-items: center;
+        }
+
+        &__item:not(:last-child) {
+            margin-bottom: 0.8rem;
+        }
+
+        .material-symbols-outlined {
+            @include font-size(2rem);
+            font-weight: bold;
+            margin-right: 1rem;
+            margin-bottom: 0.8rem;
+        }
+    }
+
+    &__button {
+        @include font-size(1.9rem);
+    }
+}
