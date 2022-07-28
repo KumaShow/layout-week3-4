@@ -1,97 +1,169 @@
 .footer {
-    background-color: $color-primary;
-    padding: 4.8rem 3.6rem 3.2rem 3.6rem;
-    color: $color-white;
+  background-color: $color-primary;
+  padding: 4.8rem 3.6rem 3.2rem 3.6rem;
+  color: $color-white;
+
+  @include respond($md) {
+    padding: 2.4rem 1.4rem;
+  }
+
+  a {
+    transition: all .2s;
+    backface-visibility: hidden;
+  }
+  a:hover {
+    transform: translateY(-3px);
+  }
+
+  &__content {
+    @include container;
 
     @include respond($md) {
-        padding: 2.4rem 1.4rem;
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+      border-bottom: 1px solid $color-white;
+      padding-bottom: 2.8rem;
+      margin-bottom: 1.6rem;
+    }
+  }
+
+  &__copyright {
+    @include container;
+
+    @include font-size(1.6rem);
+    display: flex;
+    justify-content: space-between;
+
+    @include respond($md) {
+        display: block;
+    }
+    
+    &-list {
+      display: flex;
+      @include font-size(1.4rem);
+
+      @include respond($md) {
+        display: block;
+        padding-top: 0.8rem;
+      }
     }
 
-    a:hover {
-        color: $color-grey-light;
+    &-item:not(:last-child) {
+      margin-right: 4.8rem;
+
+      @include respond($md) {
+        padding-bottom: .8rem;
+      }
     }
-
-    &__content {
-        @include container;
-
-        @include respond($md) {
-            display: flex;
-            flex-direction: row-reverse;
-            justify-content: flex-end;
-            border-bottom: 1px solid $color-white;
-            padding-bottom: 2.8rem;
-            margin-bottom: 1.6rem;
-        }
-    }
-
-    &__copyright {
-        @include container;
-
-        @include font-size(1.6rem);
-        display: flex;
-        justify-content: space-between;
-
-        @include respond($md) {
-            display: block;
-        }
-        
-        &-list {
-            display: flex;
-            @include font-size(1.4rem);
-
-            @include respond($md) {
-                display: block;
-                padding-top: 0.8rem;
-            }
-        }
-
-        &-item:not(:last-child) {
-            margin-right: 4.8rem;
-
-            @include respond($md) {
-                padding-bottom: .8rem;
-            }
-        }
-    }
-
+  }
 }
 
+// footer navbar
+.footer__nav {
+    @include font-size(1.6rem);
+    margin-bottom: 4rem;
+    font-weight: 400;
+    color: $color-white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+    &__list {
+      display: flex;
+  
+      @include respond($md) {
+        display: none;
+      }
+    }
+
+    &__item {
+      transition: all .2s;
+      backface-visibility: hidden;
+    }
+    
+    &__item a {
+      display: block;
+        padding: 1.2rem 2.4rem;
+  
+      @include respond($lg) {
+        padding: 1.21em 1.2rem;
+      }
+    }
+    
+    &__item:hover {
+        transform: translateY(-3px);
+    }
+  }
+  // footer socialMedia
+  .socialMedia {
+    display: flex;
+  
+    &__item {
+      width: 4.8rem;
+      height: 4.8rem;
+      transition: all .2s;
+      backface-visibility: hidden;
+  
+      @include respond($md) {
+        width: 2.4rem;
+        height: 2.4rem;
+      }
+  
+      &:hover {
+        transform: translateY(-3px);
+      }
+    }
+  
+    &__item:not(:last-child) {
+      margin-right: 3.2rem;
+  
+      @include respond($lg) {
+        margin-right: 1.6rem;
+      }
+  
+      @include respond($md) {
+        margin-right: .8rem;
+      }
+    }
+  }
+
 .footer__contact {
-    padding-bottom: 3.2rem;
-    border-bottom: 1px solid $color-white;
-    margin-bottom: 3.2rem;
+  padding-bottom: 3.2rem;
+  border-bottom: 1px solid $color-white;
+  margin-bottom: 3.2rem;
+
+  @include respond($md) {
+    padding: 0;
+    margin: 0;
+    border-bottom: none;
+    margin-right: auto;
+  }
+  
+  &-item {
+    display: flex;
+    align-items: center;
+
+    .material-symbols-outlined {
+      margin-right: 2.2rem;
+      font-size: 4.8rem;
+
+      @include respond($md) {
+        margin-right: 1.1rem;
+        font-size: 1.8rem;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 0.8rem;
+    }
+  }
+  
+  &-link {
+    @include font-size(3.6rem);
 
     @include respond($md) {
-        padding: 0;
-        margin: 0;
-        border-bottom: none;
-        margin-right: auto;
+      @include font-size(1.6rem)
     }
-    
-    &-item {
-        display: flex;
-        align-items: center;
-
-        .material-symbols-outlined {
-            margin-right: 2.2rem;
-            font-size: 4.8rem;
-
-            @include respond($md) {
-                margin-right: 1.1rem;
-                font-size: 1.8rem;
-            }
-        }
-
-        &:not(:last-child) {
-            margin-bottom: 0.8rem;
-        }
-    }
-    
-    &-link {
-        @include font-size(3.6rem);
-
-        @include respond($md) {
-            @include font-size(1.6rem)
-        }
-    }
+  }
 }
