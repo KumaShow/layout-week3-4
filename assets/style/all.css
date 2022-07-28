@@ -207,6 +207,8 @@ body {
   display: inline-block;
   color: #FFFFFF;
   text-align: center; }
+  .btn:hover {
+    background-color: #650300; }
   .btn--sm {
     font-size: 2rem;
     line-height: 3rem;
@@ -796,9 +798,9 @@ body {
         width: 2.4rem;
         height: 2.4rem; } }
     .socialMedia__item:hover {
-      -webkit-transform: translateY(-3px);
-          -ms-transform: translateY(-3px);
-              transform: translateY(-3px); }
+      -webkit-transform: translateY(-4px);
+          -ms-transform: translateY(-4px);
+              transform: translateY(-4px); }
   .socialMedia__item:not(:last-child) {
     margin-right: 3.2rem; }
     @media only screen and (max-width: 1024px) {
@@ -1109,16 +1111,6 @@ body {
     @media only screen and (max-width: 743px) {
       .blog__item__text {
         display: none; } }
-  .blog__item__text::after {
-    font-size: 1.6rem;
-    content: "...more";
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    z-index: 100;
-    background-color: white;
-    padding: 1px;
-    cursor: pointer; }
   .blog__item__more {
     text-align: right;
     font-family: "Roboto", sans-serif;
@@ -1131,7 +1123,12 @@ body {
     transition: all .3s; }
     @media only screen and (max-width: 1024px) {
       .blog__item__more {
-        display: none; } }
+        text-transform: lowercase;
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+        font-family: "Noto Sans TC", sans-serif;
+        font-weight: 400;
+        color: #555555; } }
     @media only screen and (max-width: 743px) {
       .blog__item__more {
         display: none; } }
@@ -1139,6 +1136,9 @@ body {
       -webkit-transform: translateY(-5px);
           -ms-transform: translateY(-5px);
               transform: translateY(-5px); }
+  @media only screen and (max-width: 1024px) {
+    .blog__item__more::before {
+      content: "..."; } }
 
 .service {
   background-color: #FBF2F2;
