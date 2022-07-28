@@ -2,6 +2,10 @@
     display: inline-block;
     color: $color-white;
     text-align: center;
+    
+    &:hover {
+        background-color: $color-primary-dark;
+    }
 
     &--sm {
         @include font-size(2rem);
