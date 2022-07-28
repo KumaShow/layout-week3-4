@@ -117,28 +117,19 @@
       display: none;
     }
   }
-  // 手機顯示 ...more
-  &__text::after {
-    font-size: 1.6rem;
-    content: "...more";
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    z-index: 100;
-    background-color: rgba(white, $alpha: 1);
-    padding: 1px;
-    cursor: pointer;
-  }
 
   &__more {
     text-align: right;
     @include roboto(3.6rem, 900);
     color: $color-primary-dark;
     transition: all .3s;
-    // width: 25%;
 
     @include respond($lg) {
-      display: none;
+      text-transform: lowercase;
+      @include font-size(1.6rem);
+      font-family: $font-notoSans;
+      font-weight: 400;
+      color: $color-grey-dark3;
     }
 
     @include respond($md) {
@@ -147,6 +138,12 @@
 
     &:hover {
       transform: translateY(-5px);
+    }
+  }
+
+  &__more::before {
+    @include respond($lg) {
+      content: "...";
     }
   }
 }
