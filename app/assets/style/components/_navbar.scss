@@ -15,87 +15,79 @@
   }
   
   &__item {
-    &:not(:last-child) {
-      margin-right: 6.4rem;
-
-      @include respond($lg) {
-        margin-right: 5.4rem;
-      }        
-    }
-
     a {
       display: block;
       padding: 2.5rem 0;
+      transition: all .3s;
+      backface-visibility: hidden;
     }
-    
     & a:hover {
-      color: $color-grey-light;
-      padding-bottom: 1px;
-      border-bottom: 1px solid $color-white;
+      transform: translateY(-5px);
+    }
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 6.4rem;
+
+    @include respond($lg) {
+      margin-right: 5.4rem;
+    }        
+  }
+}
+// 漢堡選單
+.navbar {
+  &__checkbox {
+    display: none;
+  }
+  &__button {
+    display: none;
+    @include respond($md) {
+      cursor: pointer;
+      display: block;
+    }
+  }
+  // checkbox check狀態改變後，顯示navbar
+  &__checkbox:checked ~ .navbarPhone {
+    @include respond($md) {
+      display: block;
+      animation: moveInTop .5s ease-in;
     }
   }
 }
-
-// footer navbar
-.navbar--sub {
+// 手機漢堡選單預設隱藏
+.navbarPhone {
+  display: none;
+  width: 100%;
   @include font-size(1.6rem);
   font-weight: 400;
+  background-color: $color-primary;
   color: $color-white;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  // 距離header高度
+  position: absolute;
+  top: 7.3rem;
+  left: 0;
+  z-index: 100;
 
   &__list {
     display: flex;
-
-    @include respond($md) {
-      display: none;
-    }
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
   }
-  
-  &__item {        
-    &:hover {
-      color: $color-grey-light;
-    }
-  }
-  
-  &__item:not(:last-child) {
-    margin-right: 4.8rem;
 
-    @include respond($lg) {
-      margin-right: 2rem;
-    }
-  }
-}
-
-.socialMedia {
-  display: flex;
-
-  &__item {
-    width: 4.8rem;
-    height: 4.8rem;
-    transition: all .2s;
-    backface-visibility: hidden;
-
-    @include respond($md) {
-      width: 2.4rem;
-      height: 2.4rem;
-    }
-
-    &:not(:last-child) {
-      margin-right: 3.2rem;
-
-      @include respond($lg) {
-        margin-right: 1.6rem;
-      }
-
-      @include respond($md) {
-        margin-right: .8rem;
-      }
-    }
+  &__item{
+    border: 1px solid $color-white;
+    text-align: center;
+    width: 50%;
     
-    &:hover {
-      transform: translateY(-2px);
+    a {
+      display: block;
+      padding: 1.2rem 0;
+      transition: all .3s;
+      backface-visibility: hidden;
+    }
+    & a:hover {
+      transform: translateY(-5px);
     }
   }
 }
@@ -133,16 +125,17 @@
     a {
       display: block;
       padding: 1.3rem 0;
+      transition: all .3s;
+      backface-visibility: hidden;
+    }
+    a:hover {
+      transform: translateY(-4px);
+    }
+  }
 
-      @include respond($md) {
-        padding: 1.2rem 1rem;
-      }
-
-      &:hover {
-        color: $color-grey-light;
-        padding-bottom: 1px;
-        border-bottom: 1px solid $color-white;
-      }
+  &__item a{
+    @include respond($xs) {
+      padding: 1.2rem 0;
     }
   }
 
