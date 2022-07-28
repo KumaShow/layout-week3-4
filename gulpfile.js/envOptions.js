@@ -20,6 +20,7 @@ let envOptions = {
   },
   html: {
     src: [
+      `${srcPath}/assets/view/*.html`, // 將 html 統一存放 view 資料夾
       `${srcPath}/**/*.html`,
     ],
     ejsSrc: [
