@@ -15,7 +15,7 @@
     }
   }
 }
-
+// 文章主區塊
 .article {
   padding: 2.4rem 3.6rem;
   @include respond($lg) {
@@ -71,21 +71,15 @@
     }
   }
 
-  &__item {
-    &:not(:last-child) {
-      margin-bottom: 4rem;
-    }
+  &__item:not(:last-child) {
+    margin-bottom: 4rem;
 
     @include respond($lg) {
-      &:not(:last-child) {
-        margin-bottom: 2.4rem;
-      }
+      margin-bottom: 2.4rem;
     }
 
     @include respond($md) {
-      &:not(:last-child) {
-        margin-bottom: 1.6rem;
-      }
+      margin-bottom: 1.6rem;
     }
   }
 
@@ -131,6 +125,7 @@
   &__item {
     @include roboto(1.6rem, 700);
     margin-right: 1.6rem;
+    transition: all .2s;
 
     img {
       width: 2.4rem;
@@ -138,7 +133,7 @@
     }
 
     &:hover {
-      transform: scale(1.2);
+      transform: translateY(-3px);
     }
   }
 
@@ -167,8 +162,10 @@
 
 .left-arrow {
   margin-right: 1.2rem;
+  transition: all .2s;
 }
 
 .right-arrow {
   margin-left: 1.2rem;
+  transition: all .2s;
 }
