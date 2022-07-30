@@ -153,14 +153,16 @@ body {
 .banner {
   background: url(../images/home-header.png) no-repeat center center;
   background-size: cover;
-  height: 80vh;
-  padding: 3.6rem; }
+  height: 80vh; }
+  @media only screen and (max-width: 1024px) {
+    .banner {
+      padding: 0 2.4rem; } }
   @media only screen and (max-width: 743px) {
     .banner {
       height: 60vh;
       background: url(../images/home-header-sm.png) no-repeat center center;
       background-size: cover;
-      padding: 1.4rem; } }
+      padding: 0 1.2rem; } }
   .banner__content {
     height: 100%;
     display: -webkit-box;
