@@ -2,13 +2,16 @@
     background: url(../images/home-header.png) no-repeat center center;
     background-size: cover;
     height: 80vh;
-    padding: 3.6rem;
+    
+    @include respond($lg) {
+        padding: 0 2.4rem;
+    }
 
     @include respond($md) {
         height: 60vh;
         background: url(../images/home-header-sm.png) no-repeat center center;
         background-size: cover;
-        padding: 1.4rem;
+        padding: 0 1.2rem;
     }
     
     &__content {
