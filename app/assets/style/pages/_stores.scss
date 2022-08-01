@@ -55,12 +55,12 @@
         border: 1px solid rgba(0,0,0,.2);
         @include font-size(2rem);
 
-        &__item {
+        &-item {
             display: flex;
             align-items: center;
         }
 
-        &__item:not(:last-child) {
+        &-item:not(:last-child) {
             margin-bottom: 0.8rem;
         }
 
