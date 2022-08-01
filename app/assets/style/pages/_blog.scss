@@ -105,7 +105,7 @@
 
   &__text {
     @include font-size(2rem);
-    color: $color-grey-dark3;
+    color: $color-grey-700;
     overflow: hidden;
     text-overflow: clip;
     display: -webkit-box;
@@ -133,7 +133,7 @@
       @include font-size(1.6rem);
       font-family: $font-notoSans;
       font-weight: 400;
-      color: $color-grey-dark3;
+      color: $color-grey-700;
     }
 
     @include respond($md) {

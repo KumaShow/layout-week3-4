@@ -77,7 +77,7 @@
   }
 
   &__text {
-    color: $color-grey-dark3;
+    color: $color-grey-700;
     @include font-size(1.6rem);
   }
 }
@@ -128,7 +128,7 @@
     align-items: center;
     padding-bottom: 1.6rem;
     margin-bottom: 2.4rem;
-    border-bottom: 1px solid $color-grey-dark;
+    border-bottom: 1px solid $color-grey-500;
   }
 
   &__item {

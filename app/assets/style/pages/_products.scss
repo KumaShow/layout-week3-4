@@ -17,7 +17,7 @@
   &__item {
     @include roboto(3.2rem, 400);
     width: calc(100% / 3);
-    border: 1px solid $color-grey-light4;
+    border: 1px solid $color-grey-200;
 
     &:not(:last-child) {
       border-right: none;

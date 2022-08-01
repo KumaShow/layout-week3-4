@@ -8,8 +8,8 @@
   }
   
   &__item{
-    color: $color-grey-dark3;
-    border: 1px solid $color-grey-dark3;
+    color: $color-grey-700;
+    border: 1px solid $color-grey-700;
 
     a {
       display: block;
@@ -48,7 +48,7 @@
     }
 
     &:last-child {
-      background-color: $color-grey-light3;
+      background-color: $color-grey-100;
     }
 
     &:hover {

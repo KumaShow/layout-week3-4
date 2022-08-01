@@ -1,3 +1,4 @@
+// 首頁 顧客推薦
 .card {
   display: flex;
   flex-wrap: wrap;
@@ -38,7 +39,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border: 1px solid $color-grey-light;
+    border: 1px solid $color-grey-300;
     box-shadow: 0 2px 6px rgba(0,0,0,0.16);
   }
 
@@ -58,6 +59,6 @@
 
   &__time {
     @include font-size(1.4rem);
-    color: $color-grey-dark;
+    color: $color-grey-500;
   }
 }
