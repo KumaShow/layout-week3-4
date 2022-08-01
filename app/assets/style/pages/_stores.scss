@@ -11,7 +11,6 @@
 
 // 門市據點 card
 .stores-card {
-
     display: flex;
     flex-wrap: wrap;
     margin: 0 -1.2rem;
@@ -23,11 +22,11 @@
 
     &__item {
         color: $color-grey-800;
-        width: 33%;
+        width: 33.3%;
         padding: 0 1.2rem;
         
         @include respond($lg) {
-            width: 48%;
+            width: 50%;
         }
 
         @include respond($md) {
