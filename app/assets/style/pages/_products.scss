@@ -1,5 +1,5 @@
 // 產品列別選單
-.products__header {
+.products-header {
   display: flex;
   justify-content: center;
   text-align: center;
@@ -146,7 +146,7 @@
   }
 }
 
-.products__color {
+.products-color {
   &__item {
     display: inline-block;
     width: 2.4rem;

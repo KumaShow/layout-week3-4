@@ -93,7 +93,7 @@
 }
 
 // blog navbar
-.blog__nav {
+.blog-nav {
   background-color: $color-primary-dark;
   color: $color-white;
   @include font-size(2rem);
@@ -102,6 +102,7 @@
   @include respond($md) {
     @include font-size(1.6rem);
     padding: 0;
+    display: none;
   }
   
   &__content {

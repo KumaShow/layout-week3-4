@@ -10,17 +10,15 @@
 }
 
 // 門市據點 card
-.stores__card {
+.stores-card {
 
-    &__list {
-        display: flex;
-        flex-wrap: wrap;
-        margin: 0 -1.2rem;
-        // 卡片底部推擠消除
-        margin-bottom: -4.8rem;
-        @include respond($lg) {
-            margin-bottom: 0;
-        }
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -1.2rem;
+    // 卡片底部推擠消除
+    margin-bottom: -4.8rem;
+    @include respond($lg) {
+        margin-bottom: 0;
     }
 
     &__item {
