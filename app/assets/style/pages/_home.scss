@@ -75,10 +75,11 @@
     text-align: center;
 
     &__content {
-        padding: 8rem;
+        margin: 8rem 0;
 
         @include respond($md) {
-            padding: 4rem 1.4rem;
+            margin: 4rem 0;
+            padding: 0 1.4rem;
         }
     }
 
@@ -93,6 +94,7 @@
 
     &__list {
         display: flex;
+        justify-content: center;
         margin: 0 -1.2rem;
 
         @include respond($lg) {
@@ -194,12 +196,10 @@
 // 顧客推薦
 .recommend {
     &__content {
-        padding-top: 8rem;
-        padding-bottom: 8rem;
+        margin: 8rem 0;
 
-        @include respond($lg) {
-            padding-top: 4rem;
-            padding-bottom: 4rem;
+        @include respond($md) {
+            margin: 4rem 0;
         }
     }
 

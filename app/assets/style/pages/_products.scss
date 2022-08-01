@@ -50,12 +50,7 @@
 // 下方產品列表
 .products {
   &__content {
-    padding-top: 8rem;
-    padding-bottom: 8rem;
-
-    @include respond($md) {
-      padding: 6.4rem 1.4rem;
-    }
+    @include content;
   }
 
   &__text {
@@ -88,23 +83,15 @@
     justify-content: center;
     flex-wrap: wrap;
     margin: 0 -1.2rem;
-
-    @include respond($lg) {
-      padding: 0 3.6rem;
-    }
-    
-    @include respond($md) {
-      padding: 0;
-    }
   }
 
   &__item {
     padding: 0 1.2rem;
-    width: 23.5%;
+    width: 25%;
     margin-bottom: 8rem;
 
     @include respond($lg) {
-      width: 48%;
+      width: 50%;
 
       &:not(:last-child) {
         margin-bottom: 4rem;
@@ -117,10 +104,10 @@
     }
 
     &--sunglass {
-      width: 32%;
+      width: 33.3%;
 
       @include respond($lg) {
-        width: 48%;
+        width: 50%;
       }
       @include respond($md) {
         width: 100%;
