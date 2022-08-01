@@ -1,5 +1,12 @@
-// 文上方 Breadcrumbs
-.article__nav {
+// 部落格 navbar，手機樣式 blog隱藏 article顯示
+.article__blog-nav {
+  @include respond($md) {
+    display: block;
+  }
+}
+
+// 文章上方 Breadcrumbs
+.article-nav {
   @include font-size(1.6rem);
   margin-bottom: 0.8rem;
 
@@ -15,6 +22,7 @@
     }
   }
 }
+
 // 文章主區塊
 .article {
   padding: 2.4rem 3.6rem;
@@ -23,33 +31,6 @@
 
     @include respond($md) {
       padding: 1.6rem 1.4rem 6.4rem 1.4rem;
-    }
-  }
-
-  &__content {
-    display: flex;
-    gap: 2%;
-
-    &__main {
-      width: 66%;
-      margin-bottom: 4rem;
-
-      @include respond($md) {
-        width: 100%;
-        margin-bottom: 0;
-      }
-    }
-
-    &__aside {
-      max-width: 25.6rem;
-
-      @include respond($lg) {
-        max-width: 15rem;
-      }
-
-      @include respond($md) {
-        display: none;
-      }
     }
   }
 
@@ -101,8 +82,36 @@
   }
 }
 
+// 文章主體內左右區塊
+.article-content {
+  display: flex;
+  gap: 2%;
+
+  &__main {
+    width: 66%;
+    margin-bottom: 4rem;
+
+    @include respond($md) {
+      width: 100%;
+      margin-bottom: 0;
+    }
+  }
+
+  &__aside {
+    max-width: 25.6rem;
+
+    @include respond($lg) {
+      max-width: 15rem;
+    }
+
+    @include respond($md) {
+      display: none;
+    }
+  }
+}
+
 // 底部連結
-.article__footer {
+.article-footer {
   width: 66%;
   margin-bottom: 8rem;
 
