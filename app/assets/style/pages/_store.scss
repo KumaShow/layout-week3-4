@@ -89,6 +89,7 @@
 
   &__icon span{
     @include font-size(2rem);
+    line-height: 1.5;
     font-weight: bold;
     margin-right: 1rem;
     margin-bottom: 0.8rem;
