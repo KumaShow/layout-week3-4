@@ -12,6 +12,11 @@
         text-indent: 101%;
         overflow: hidden;
         white-space: nowrap;
+        transition: all .3s;
+
+        &:hover {
+            transform: translateY(-4px);
+        }
     }
 
     &__content {

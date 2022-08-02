@@ -119,10 +119,15 @@
     &__image {
         margin-bottom: 0.8rem;
         width: 100%;
+        transition: filter .2s;
 
         @include respond($xs) {
             max-width: 34.8rem;
             width: 90%;
+        }
+
+        &:hover {
+            filter: brightness(110%);
         }
     }
 
@@ -184,6 +189,10 @@
         @include respond($lg) {
             margin-bottom: 2.4rem;
         }
+    }
+
+    &__image:hover {
+        filter: brightness(90%);
     }
     
     &__subTitle {
