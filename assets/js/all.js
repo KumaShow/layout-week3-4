@@ -4,4 +4,7 @@ console.log('Hello!');
 $(document).ready(function () {
   console.log('HesSchool Hello!');
 });
+"use strict";
+
+AOS.init();
 //# sourceMappingURL=all.js.map
